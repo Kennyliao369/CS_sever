@@ -1,0 +1,11 @@
+{
+  "name": "cs_sever",
+  "version": "1.0.0",
+  "main": "CS_sever.js",
+  "scripts": {
+    "start": "node cssync.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
