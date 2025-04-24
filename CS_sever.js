@@ -1,9 +1,10 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 10000;
 
 app.use(cors());
-// 假設這是你要提供的資料
+
 const userData = {
   "12345": { status: "ok", value: 42 },
   "67890": { status: "error", value: 0 }
@@ -15,8 +16,8 @@ app.get("/api/:id", (req, res) => {
   res.json(data);
 });
 
-app.get('/', (req, res) => {
-  res.send('伺服器已上線！');
+app.get("/", (req, res) => {
+  res.send("伺服器已上線！");
 });
 
 app.listen(PORT, () => {
