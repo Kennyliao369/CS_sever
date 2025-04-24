@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 10000;
 
+app.use(cors());
 // 假設這是你要提供的資料
 const userData = {
   "12345": { status: "ok", value: 42 },
